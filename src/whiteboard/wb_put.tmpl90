@@ -22,13 +22,13 @@ function FNCNAME(wb_put_)(key, val, options0, wb) result(status)
     integer(kind = int64) :: my_wb
     integer :: options
 #include "f_wb_put_itf.hf"
-#ifdef _OPENMP
-    integer, external :: omp_get_num_threads
-    if (omp_get_num_threads() > 1) then
-        status = WB_ERROR
-        return
-    endif
-#endif
+!!$#ifdef _OPENMP
+!!$    integer, external :: omp_get_num_threads
+!!$    if (omp_get_num_threads() > 1) then
+!!$        status = WB_ERROR
+!!$        return
+!!$    endif
+!!$#endif
 
 #ifdef DEBUG
     print *, "FNCNAME(wb_put_)", "(", key, "val, [wb])"
@@ -74,13 +74,13 @@ function NAMEA(FNCNAME(wb_put_))(key, val, options0, wb) result(status)
 #define ARRAY
 #include "f_wb_put_itf.hf"
 #undef ARRAY
-#ifdef _OPENMP
-    integer, external :: omp_get_num_threads
-    if (omp_get_num_threads() > 1) then
-        status = WB_ERROR
-        return
-    endif
-#endif
+!!$#ifdef _OPENMP
+!!$    integer, external :: omp_get_num_threads
+!!$    if (omp_get_num_threads() > 1) then
+!!$        status = WB_ERROR
+!!$        return
+!!$    endif
+!!$#endif
 
 #ifdef DEBUG
     print *, "FNCNAME(wb_put_)", "(", key, "val, [wb])"
