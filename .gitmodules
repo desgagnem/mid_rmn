@@ -1,8 +1,8 @@
 [submodule "cmake_rpn"]
 	path = cmake_rpn
-	url = https://gitlab.science.gc.ca/RPN-SI/cmake_rpn.git
+	url = https://github.com/ECCC-ASTD-MRD/cmake_rpn.git
 	branch = dev
 [submodule "App"]
 	path = App
-	url = https://gitlab.science.gc.ca/RPN-SI/App.git
+	url = https://github.com/ECCC-ASTD-MRD/App.git
 	branch = master
